@@ -1,4 +1,4 @@
-## Nimbus Overview
+# Nimbus Overview
 
 Nimbus is a general purpose cloud computing system specially designed for
 computations with short tasks. Nimbus is developed in C++ and the API offers a
@@ -19,7 +19,7 @@ PhysBAM, a physics  based simulation library, into Nimbus. Nimbus runs
 particle-levelset simulations within 15% of the MPI hand-tuned implementations. 
 
 
-## Downloading and Building
+# Downloading and Building
 
 Nimbus project repository including the core engine source code along with a
 handful of applications is available at
@@ -32,13 +32,13 @@ the Nimbus root:
     $ make
 
 
-## Running Examples
+# Running Examples
 
 After you download and build Nimbus you should be able to run simple examples on
 your local machine. There are few examples that you can run 
 
 
-## Where to Go from Here
+# Where to Go from Here
 
 ### Programming Guides:
 

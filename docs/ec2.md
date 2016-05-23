@@ -1,1 +1,1 @@
-## Running Nimbus on EC2
+# Running Nimbus on EC2

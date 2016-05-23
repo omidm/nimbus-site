@@ -1,7 +1,7 @@
-## Monitoring Nimbus
+# Monitoring Nimbus
 
-### Logging (timer & dbg)
+## Logging (timer & dbg)
 
-### Statistics
+## Statistics
 
-### Debug Mode
+## Debug Mode
