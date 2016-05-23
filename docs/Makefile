@@ -1,6 +1,6 @@
 
 TARGET = docs
-CSSFILE = buttondown.css
+CSSFILE = ../css/bootstrap.css
 
 .PHONY: default clean $(TARGET)
 
