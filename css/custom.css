@@ -4,6 +4,13 @@ body {
     padding-top: 70px;
 }
 
+/** leave some space for the nav bars */
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
 /**
  * Make dropdown menus in nav bars show on hover instead of click
  * using solution at http://stackoverflow.com/questions/8878033/how-
