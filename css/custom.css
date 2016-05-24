@@ -1,0 +1,49 @@
+
+/** leave some space for the nav bars */
+body {
+    padding-top: 70px;
+}
+
+/**
+ * Make dropdown menus in nav bars show on hover instead of click
+ * using solution at http://stackoverflow.com/questions/8878033/how-
+ * to-make-twitter-bootstrap-menu-dropdown-on-hover-rather-than-click
+ **/
+ul.nav li.dropdown:hover ul.dropdown-menu{
+  display: block;
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}
+
+/** Make the submenus open on hover on the parent menu item */
+ul.nav li.dropdown ul.dropdown-menu li.dropdown-submenu:hover ul.dropdown-menu {
+  display: block;
+}
+
+/** Make the submenus be invisible until the parent menu item is hovered upon */
+ul.nav li.dropdown ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu {
+  display: none;
+}
+
+/**
+ * Made the navigation bar buttons not grey out when clicked.
+ * Essentially making nav bar buttons not react to clicks, only hover events.
+ */
+.navbar .nav li.dropdown.open > .dropdown-toggle {
+  background-color: transparent;
+}
+
+
+
+
+/*
+.navbar {
+    background: #2fa4e7;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+*/
