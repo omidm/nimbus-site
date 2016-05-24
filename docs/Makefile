@@ -1,5 +1,6 @@
 
 TARGET = docs
+HEADER = header.html
 AFTER = after-body.html
 BEFORE = before-body.html
 CUSTCSS = ../css/custom.css
@@ -14,9 +15,9 @@ HTMLFILES = $(subst .md,.html,$(MDFILES))
 
 $(TARGET): $(HTMLFILES)
 
-%.html: %.md $(BEFORE) $(AFTER) $(MAINCSS) $(CUSTCSS)
-	pandoc -s -S --toc -c $(MAINCSS) -c $(CUSTCSS) -B $(BEFORE) -A $(AFTER) $< -o $@
+%.html: %.md $(HEADER) $(BEFORE) $(AFTER) $(MAINCSS) $(CUSTCSS)
+	pandoc -s -S --toc -c $(MAINCSS) -c $(CUSTCSS) -H $(HEADER) -B $(BEFORE) -A $(AFTER) $< -o $@
 
 clean:
-	find . -type f -name '*.html' -not -name $(BEFORE) -not -name $(AFTER) | xargs rm
+	find . -type f -name '*.html' -not -name $(HEADER) -not -name $(BEFORE) -not -name $(AFTER) | xargs rm
 
