@@ -25,7 +25,7 @@
     <script src="js/bootstrap.js"></script>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top container">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -51,15 +51,18 @@
 
     <div class="container">
 
-      <div class="jumbotron">
-          <p><b>Nimbus</b> is a scalable cloud computing framework for jobs with sub-millisecond tasks
-          <a href="download.html" class="btn" style="color:#fff; background-color:green">Download Nimbus</a>
-          </p>
+      <div class="jumbotron" style="text-align: center">
+        <p>
+          <b>Nimbus</b> is a scalable cloud computing framework for jobs with sub-millisecond tasks
+        </p>
+        <p>
+          <a href="download.html" class="btn btn-lg btn-success">Download Nimbus</a>
+        </p>
       </div>
 
 
       <div class="row row-padded" style="margin-bottom: 60pt">
-        <div class="col-md-6 col-sm-4">
+        <div class="col-md-6 col-sm-6">
           <h1>Speed</h1>
 <!--
           <p class="lead">
@@ -71,23 +74,15 @@
           </p>
 -->
         </div>
-        <div class="col-md-6 col-sm-4">
-          <div style="width: 100%; text-align: center;">
-            <img src="images/lr.png" style="width: 100%; padding: 0pt"/>
-            <div class="caption" style="font-size:14pt">Logistic Regression in Nimbus, Spark, and Naiad</div>
-          </div>
+        <div class="col-md-4 col-sm-4">
+          <img src="images/lr.png" class="img-responsive" style="width: 100%; padding: 0pt"/>
+          <div class="caption" style="font-size:14pt; text-align: center">Logistic Regression</div>
         </div>
       </div>
 
 
       <div class="row row-padded" style="margin-bottom: 60pt">
-        <div class="col-md-6 col-sm-4">
-          <div style="width: 100%; text-align: center;">
-            <img src="images/overhead.png" style="width: 100%; padding: 0pt"/>
-            <div class="caption" style="font-size:14pt">Overhead of Nimbus, Spark, and Naiad at Scale</div>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-4">
+        <div class="col-md-6 col-sm-6">
           <h1>Scalability</h1>
 <!--
           <p class="lead">
@@ -99,13 +94,20 @@
           </p>
 -->
         </div>
+        <div class="col-md-4 col-sm-4">
+          <img src="images/overhead.png" style="width: 100%; padding: 0pt"/>
+          <div class="caption" style="font-size:14pt; text-align: center">Overhead at Scale</div>
+        </div>
       </div>
 
 
       <div class="row row-padded" style="margin-bottom: 60pt">
-        <div class="col-md-4 col-sm-4">
+        <div class="col-md-6 col-sm-6">
           <h1>Physical Simulations
           </h1>
+          <div class="row">
+            <img src="images/glass.jpg" style="width: 50%; padding: 10pt"/>
+          </div>
 <!--
           <p class="lead">
             Main results.
@@ -116,16 +118,9 @@
           </p>
 -->
         </div>
-        <div class="col-md-8 col-sm-4">
-          <div style="width: 100%; text-align: center;">
-            <table style="width: 100%;">
-              <tr>
-                <td style="padding: 5pt;"><img src="images/glass.jpg" style="width: 150pt; padding: 0pt"/></td>
-                <td><img src="images/water.png" style="width: 100%; padding: 0pt"/></td>
-              </tr>
-            </table>
-            <div class="caption" style="font-size:14pt">Water Simulation in Nimbus, and MPI</div>
-          </div>
+        <div class="col-md-4 col-sm-4">
+          <img src="images/water.png" style="width: 100%; padding: 0pt"/>
+          <div class="caption" style="font-size:14pt; text-align: center">Water Simulation</div>
         </div>
       </div>
 

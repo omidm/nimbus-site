@@ -54,61 +54,78 @@
     <h2> Technical Reports:</h2>
 
       <div class="jumbotron">
-        <b>Distributed Graphical Simulation in the Cloud</b>
-        <a class="btn-lg" href="http://">
-          <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-        </a>
-        <br>Omid Mashayekhi, Chinmayee Shah, Hang Qu, Andrew Lim, Philip Levis
-        <br><b>Abstract:</b>
-        <br>Graphical simulations are a cornerstone of modern media and
-        films. But existing software packages are designed to run on HPC
-        nodes, and perform poorly in the computing cloud.  These
-        simulations have complex data access patterns over complex data
-        structures, and mutate data arbitrarily, and so are a poor fit for
-        existing cloud computing systems. We describe a software
-        architecture for running graphical simulations in the cloud that
-        decouples control logic, computations and data exchanges. This
-        allows a central controller to balance load by redistributing
-        computations, and recover from failures. Evaluations show that the
-        architecture can run existing, state-of-the-art simulations in the
-        presence of stragglers and failures, thereby enabling this large
-        class of applications to use the computing cloud for the first
-        time.
+      <dl>
+        <dt>
+          Distributed Graphical Simulation in the Cloud
+          <a class="btn-lg" href="http://arxiv.org/abs/1606.01966" target="_blank">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+          </a>
+        </dt>
+        <dd>
+          Omid Mashayekhi, Chinmayee Shah, Hang Qu, Andrew Lim, Philip Levis
+        </dd>
+        <dt>
+          Abstract:
+        </dt>
+        <dd>
+          Graphical simulations are a cornerstone of modern media and
+          films. But existing software packages are designed to run on HPC
+          nodes, and perform poorly in the computing cloud.  These
+          simulations have complex data access patterns over complex data
+          structures, and mutate data arbitrarily, and so are a poor fit for
+          existing cloud computing systems. We describe a software
+          architecture for running graphical simulations in the cloud that
+          decouples control logic, computations and data exchanges. This
+          allows a central controller to balance load by redistributing
+          computations, and recover from failures. Evaluations show that the
+          architecture can run existing, state-of-the-art simulations in the
+          presence of stragglers and failures, thereby enabling this large
+          class of applications to use the computing cloud for the first
+          time.
+        </dd>
+      </dl>
       </div>
+
 
 
       <div class="jumbotron">
-        <b>Scalable Fast Cloud Computing with Execution Templates</b>
-        <a class="btn-lg" href="http://">
-          <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
-        </a>
-        <br>Omid Mashayekhi, Hang Qu, Chinmayee Shah, Philip Levis
-        <br><b>Abstract:</b>
-        <br>Large scale cloud data analytics applications are often CPU
-        bound. Most of these cycles are wasted: benchmarks written in C++ run
-        10-51 times faster than frameworks such as Naiad and Spark.  However,
-        calling faster implementations from those frameworks only sees
-        moderate (3-5x) speedups because their control planes cannot schedule
-        work fast enough.
-        
-        This paper presents execution templates, a control plane abstraction
-        for CPU-bound cloud applications, such as machine learning.  Execution
-        templates leverage highly repetitive control flow to cache scheduling
-        decisions as templates.  Rather than reschedule hundreds of
-        thousands of tasks on every loop execution, nodes instantiate these
-        templates.  A controller's template specifies the execution across all
-        worker nodes, which it partitions into per-worker templates. To ensure
-        that templates execute correctly, controllers dynamically patch
-        templates to match program control flow.  We have implemented
-        execution templates in Nimbus, a C++ cloud computing framework.
-        Running in Nimbus, analytics benchmarks can run 16-43 times faster
-        than in Naiad and Spark. Nimbus's control plane can scale out to run
-        these faster benchmarks on up to 100 nodes (800 cores).
+      <dl>
+        <dt>
+          Scalable, Fast Cloud Computing with Execution Templates
+          <a class="btn-lg" href="http://arxiv.org/abs/1606.01972" target="_blank">
+            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+          </a>
+        </dt>
+        <dd>
+          Omid Mashayekhi, Hang Qu, Chinmayee Shah, Philip Levis
+        </dd>
+        <dt>
+          Abstract:
+        </dt>
+        <dd>
+          Large scale cloud data analytics applications are often CPU
+          bound. Most of these cycles are wasted: benchmarks written in C++ run
+          10-51 times faster than frameworks such as Naiad and Spark.  However,
+          calling faster implementations from those frameworks only sees
+          moderate (3-5x) speedups because their control planes cannot schedule
+          work fast enough.
+          
+          This paper presents execution templates, a control plane abstraction
+          for CPU-bound cloud applications, such as machine learning.  Execution
+          templates leverage highly repetitive control flow to cache scheduling
+          decisions as templates.  Rather than reschedule hundreds of
+          thousands of tasks on every loop execution, nodes instantiate these
+          templates.  A controller's template specifies the execution across all
+          worker nodes, which it partitions into per-worker templates. To ensure
+          that templates execute correctly, controllers dynamically patch
+          templates to match program control flow.  We have implemented
+          execution templates in Nimbus, a C++ cloud computing framework.
+          Running in Nimbus, analytics benchmarks can run 16-43 times faster
+          than in Naiad and Spark. Nimbus's control plane can scale out to run
+          these faster benchmarks on up to 100 nodes (800 cores).
+        </dd>
+      </dl>
       </div>
-
-
-
-
 
     </div> <!-- /container -->
 
