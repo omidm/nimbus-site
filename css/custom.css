@@ -1,7 +1,9 @@
 
-/** leave some space for the nav bars */
 body {
+    /* leave some space for the nav bars at top */
     padding-top: 70px;
+    /* leave some blank space at the bottom */
+    padding-bottom: 70px;
 }
 
 /** leave some space for the nav bars */

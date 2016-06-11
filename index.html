@@ -25,7 +25,7 @@
     <script src="js/bootstrap.js"></script>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top container">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,7 +53,8 @@
 
       <div class="jumbotron" style="text-align: center">
         <p>
-          <b>Nimbus</b> is a scalable cloud computing framework for jobs with sub-millisecond tasks
+          <b>Nimbus</b> is a scalable cloud computing framework for jobs with
+          sub-millisecond tasks.
         </p>
         <p>
           <a href="download.html" class="btn btn-lg btn-success">Download Nimbus</a>
@@ -62,67 +63,170 @@
 
 
       <div class="row row-padded" style="margin-bottom: 60pt">
-        <div class="col-md-6 col-sm-6">
-          <h1>Speed</h1>
-<!--
+        <div class="col-md-8 col-sm-8">
+          <h1>Scalability</h1>
           <p class="lead">
-            Main results.
+            Nimbus overhead is negligible even at high scales.
           </p>
 
           <p>
-            Concise explanation why.
+            Nimbus has a novel control plane abstraction, called
+            <strong>Execution Templates</strong>, which allows the runtime
+            system handle orders of magnitude higher task rates compared to the
+            best available centralized (Spark) and distributed (Naiad) cloud
+            computing frameworks. At a high level, Execution Templates are
+            dynamically generated execution plans that are installed by the
+            controller at the workers.  The key idea behind execution template
+            is that long running applications are iterative in nature (<a
+            href="#FAQ1">What is an example for iterative patterns within an
+            application?</a>). Instead of scheduling the computations for each
+            iteration from scratch, controller installs the execution plan on
+            each worker once, and instantiates it with new parameters for later
+            iterations. If the load changes or stragglers appear, controller
+            generates new templates to adopt to the dynamic behaviour of the
+            cloud, on the fly. In many ways, execution templates resemble
+            <strong> JIT Compilers</strong>(<a href="#FAQ2">How similar are JIT
+            compilers and execution templates?</a>).
           </p>
--->
         </div>
         <div class="col-md-4 col-sm-4">
-          <img src="images/lr.png" class="img-responsive" style="width: 100%; padding: 0pt"/>
+          <img src="images/overhead.png" style="width: 100%; margin: 50pt 0 0 0"/>
+          <!--div class="caption" style="font-size:14pt; text-align: center">Overhead at Scale</div-->
+        </div>
+      </div>
+
+
+      <div class="row row-padded" style="margin-bottom: 60pt">
+        <div class="col-md-8 col-sm-8">
+          <h1>Speed</h1>
+          <p class="lead">
+            Nimbus runs up to 40x faster than Spark.
+          </p>
+
+          <p>
+            Nimbus's speedup comes from two major factors: 1) implementing
+            efficient tasks in C++, and 2) optimized control plane enabled by
+            <strong>Execution Template</strong>.  Nimbus's core system is
+            implemented in C++, and there are handy APIs for machine learning
+            and physical simulations applications. Implementing tasks in C++, in
+            some cases, brings a factor of 50x speedup compared to Scala
+            implementation in Spark (<a href="#FAQ3">Why is Scala implementation
+            50x slower than C++?</a>). Short, efficient tasks, however, pressure
+            the runtime system to deliver higher task throughput with lower
+            latency. Available frameworks cannot keep up with the task rate
+            demands of the optimized applications. So, even if the tasks are
+            optimized, the overall completion time does not see the same
+            speedup, since the control plane becomes a bottleneck (<a
+            href="#FAQ4">What if other frameworks run tasks at the speed of
+            C++</a>). <strong> Execution Templates</strong> allow Nimbus to
+            deliver orders of magnitude higher task rate at even higher scales
+            (<a href="#FAQ5">How does Nimbus's task throughput scale?</a>). This
+            enables Nimbus to schedule optimized tasks with negligible overhead
+            and realize the actual speedup coming from efficient tasks.
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <img src="images/lr.png" style="width: 100%; margin: 50pt 0 0 0"/>
           <div class="caption" style="font-size:14pt; text-align: center">Logistic Regression</div>
         </div>
       </div>
 
 
       <div class="row row-padded" style="margin-bottom: 60pt">
-        <div class="col-md-6 col-sm-6">
-          <h1>Scalability</h1>
-<!--
-          <p class="lead">
-            Main results.
-          </p>
-
-          <p>
-            Concise explanation why.
-          </p>
--->
-        </div>
-        <div class="col-md-4 col-sm-4">
-          <img src="images/overhead.png" style="width: 100%; padding: 0pt"/>
-          <div class="caption" style="font-size:14pt; text-align: center">Overhead at Scale</div>
-        </div>
-      </div>
-
-
-      <div class="row row-padded" style="margin-bottom: 60pt">
-        <div class="col-md-6 col-sm-6">
+        <div class="col-md-8 col-sm-8">
           <h1>Physical Simulations
           </h1>
-          <div class="row">
-            <img src="images/glass.jpg" style="width: 50%; padding: 10pt"/>
-          </div>
-<!--
           <p class="lead">
-            Main results.
+            Nimbus enables running HPC applications.
           </p>
 
           <p>
-            Concise explanation why.
+            Physical simulations are traditionally classified under HPC
+            applications. They usually consists of a series of dense
+            computations followed by data exchanges. The computations are in the
+            order of hundreds of microseconds to few milliseconds (<a
+            href="#FAQ6">What is the task length distribution of physical
+            simulations?</a>), which induces high task throughputs on the
+            runtime systems. Nimbus, for the first time, enables running HPC
+            applications within a cloud framework. We have ported <a
+            href="http://physbam.stanford.edu" target="_blank">PhysBAM</a>, which is a
+            physics based simulations library in to Nimbus. Nimbus performance
+            is within 15% of the hand tuned MPI code  for simulations with
+            billions of cells. Nimbus provides fault tolerance and load
+            balancing required for the cloud environments while keeping the
+            control plane overhead. Without Execution Templates, the control
+            plane overhead of Nimbus dominates the runtime and slows down
+            computation by 520%.
           </p>
--->
         </div>
         <div class="col-md-4 col-sm-4">
-          <img src="images/water.png" style="width: 100%; padding: 0pt"/>
-          <div class="caption" style="font-size:14pt; text-align: center">Water Simulation</div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <img src="images/glass.jpg" style="width: 100%; padding: 5pt"/>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <img src="images/smoke.jpg" style="width: 100%; padding: 5pt"/>
+            </div>
+          </div>
+          <div class="row">
+            <img src="images/water.png" style="width: 100%;"/>
+            <div class="caption" style="font-size:14pt; text-align: center">Water Simulation</div>
+          </div>
         </div>
       </div>
+
+
+      <h1>Frequently Asked Questions</h1>
+      <dl>
+        <dt id="FAQ1" style="font-size:14pt">
+          What is an example for iterative patterns within an application?
+        </dt>
+        <dd>
+          Answer...
+        </dd>
+        <br>
+        <dt id="FAQ2" style="font-size:14pt">
+          How similar are JIT compilers and execution templates?
+        </dt>
+        <dd>
+          Answer...
+        </dd>
+        <br>
+        <dt id="FAQ3" style="font-size:14pt">
+          Why is Scala implementation 50x slower than C++?
+        </dt>
+        <dd>
+          Answer...
+        </dd>
+        <br>
+        <dt id="FAQ4" style="font-size:14pt">
+          What if other frameworks run tasks at the speed of C++?
+        </dt>
+        <dd>
+          Answer...
+        </dd>
+        <br>
+        <dt id="FAQ5" style="font-size:14pt">
+          How does Nimbus's task throughput scale?
+        </dt>
+        <dd>
+          Answer...
+        </dd>
+        <br>
+        <dt id="FAQ6" style="font-size:14pt">
+          What is the task length distribution of physical simulations?
+        </dt>
+        <dd>
+          Answer...
+        </dd>
+        <br>
+      </dl>
+
+    <h1 id="">Contact Us</h1>
+    <p> You can email us at Nimbus developers mailing list:
+    <img src="images/nimbus-devel.jpg" style="width:200pt"></img>
+    </p>
+    <p> You can also email each of the team members individually <a href="people.html">(developers)</a>.</p>
 
 
     </div> <!-- /container -->
