@@ -123,6 +123,12 @@ ul.nav li.dropdown ul.dropdown-menu li.dropdown-submenu ul.dropdown-menu {
     }
 }
 
+/* added by omidm */
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #fff;
+  background-color: #5CB85C;;
+}
 
 
 
