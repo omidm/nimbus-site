@@ -41,11 +41,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="download.html">Download</a></li>
             <li><a href="docs/index.html">Documentation</a></li>
             <li><a href="papers.html">Papers</a></li>
             <li><a href="people.html">People</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -62,7 +61,7 @@
             Nimbus is a scalable cloud computing framework for sub-millisecond tasks.
           </p>
           <p style="text-align: center;">
-            <a href="download.html" class="btn btn-lg btn-success">Download Nimbus</a>
+            <a href="https://github.com/omidm/nimbus" target="_blank" class="btn btn-lg btn-success">Download Nimbus</a>
           </p>
         </div>
       </div>
@@ -84,14 +83,14 @@
             dynamically generated execution plans that are installed by the
             controller at the workers.  The key idea behind execution template
             is that long running applications are iterative in nature (<a
-            href="#FAQ1">What is an example for iterative patterns within an
+            href="faq.html#q1">What is an example for iterative patterns within an
             application?</a>). Instead of scheduling the computations for each
             iteration from scratch, controller installs the execution plan on
             each worker once, and instantiates it with new parameters for later
             iterations. If the load changes or stragglers appear, controller
             generates new templates to adopt to the dynamic behaviour of the
             cloud, on the fly. In many ways, execution templates resemble
-            <strong> JIT Compilers</strong> (<a href="#FAQ2">How similar are JIT
+            <strong> JIT Compilers</strong> (<a href="faq.html#q2">How similar are JIT
             compilers and execution templates?</a>).
           </p>
         </div>
@@ -116,17 +115,17 @@
             implemented in C++, and there are handy APIs for machine learning
             and physical simulations applications. Implementing tasks in C++, in
             some cases, brings a factor of 50x speedup compared to Scala
-            implementation in Spark (<a href="#FAQ3">Why is Scala implementation
+            implementation in Spark (<a href="faq.html#q3">Why is Scala implementation
             50x slower than C++?</a>). Short, efficient tasks, however, pressure
             the runtime system to deliver higher task throughput with lower
             latency. Available frameworks cannot keep up with the task rate
             demands of the optimized applications. So, even if the tasks are
             optimized, the overall completion time does not see the same
             speedup, since the control plane becomes a bottleneck (<a
-            href="#FAQ4">What if other frameworks run tasks at the speed of
+            href="faq.html#q4">What if other frameworks run tasks at the speed of
             C++</a>). <strong> Execution Templates</strong> allow Nimbus to
             deliver orders of magnitude higher task rate at even higher scales
-            (<a href="#FAQ5">How does Nimbus's task throughput scale?</a>). This
+            (<a href="faq.html#q5">How does Nimbus's task throughput scale?</a>). This
             enables Nimbus to schedule optimized tasks with negligible overhead
             and realize the actual speedup coming from efficient tasks.
           </p>
@@ -151,7 +150,7 @@
             applications. They usually consists of a series of dense
             computations followed by data exchanges. The computations are in the
             order of hundreds of microseconds to few milliseconds (<a
-            href="#FAQ6">What is the task length distribution of physical
+            href="faq.html#q6">What is the task length distribution of physical
             simulations?</a>), which induces high task throughputs on the
             runtime systems. Nimbus, for the first time, enables running HPC
             applications within a cloud framework. We have ported <a
@@ -181,52 +180,6 @@
         </div>
       </div>
 
-
-      <h1>Frequently Asked Questions</h1>
-      <dl>
-        <dt id="FAQ1" style="font-size:14pt">
-          What is an example for iterative patterns within an application?
-        </dt>
-        <dd>
-          Answer...
-        </dd>
-        <br>
-        <dt id="FAQ2" style="font-size:14pt">
-          How similar are JIT compilers and execution templates?
-        </dt>
-        <dd>
-          Answer...
-        </dd>
-        <br>
-        <dt id="FAQ3" style="font-size:14pt">
-          Why is Scala implementation 50x slower than C++?
-        </dt>
-        <dd>
-          Answer...
-        </dd>
-        <br>
-        <dt id="FAQ4" style="font-size:14pt">
-          What if other frameworks run tasks at the speed of C++?
-        </dt>
-        <dd>
-          Answer...
-        </dd>
-        <br>
-        <dt id="FAQ5" style="font-size:14pt">
-          How does Nimbus's task throughput scale?
-        </dt>
-        <dd>
-          Answer...
-        </dd>
-        <br>
-        <dt id="FAQ6" style="font-size:14pt">
-          What is the task length distribution of physical simulations?
-        </dt>
-        <dd class="lead">
-          Answer...
-        </dd>
-        <br>
-      </dl>
 
     <h1>Contact Us</h1>
     <pi class="lead"> You can email us at Nimbus developers mailing list:
