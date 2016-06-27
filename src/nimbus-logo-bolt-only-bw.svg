@@ -15,8 +15,8 @@
    height="1052.3622"
    id="svg2"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="nimbus-logo-color.svg"
-   inkscape:export-filename="/home/omidm/cloud/doc/site/images/nimbus-logo-color.png"
+   sodipodi:docname="nimbus-logo-bolt-only-color.svg"
+   inkscape:export-filename="/home/omidm/cloud/doc/site/images/nimbus-logo-bolt-only-color.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
   <sodipodi:namedview
@@ -32,9 +32,9 @@
      inkscape:window-height="1548"
      id="namedview4575"
      showgrid="false"
-     inkscape:zoom="4.9579014"
-     inkscape:cx="289.46168"
-     inkscape:cy="463.07383"
+     inkscape:zoom="1.0240635"
+     inkscape:cx="372.04724"
+     inkscape:cy="526.18109"
      inkscape:window-x="1313"
      inkscape:window-y="24"
      inkscape:window-maximized="0"
@@ -1362,7 +1362,10 @@
      inkscape:connector-curvature="0"
      style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-miterlimit:2;fill-opacity:1;stroke-dasharray:none"
      id="path3711"
-     d="m 301.56244,518.0895 c -10.1227,0 -18.32083,7.60343 -21.03485,17.77901 -3.0902,-1.78442 -6.43921,-3.06535 -10.16917,-3.06535 -12.30328,0 -22.28859,10.98616 -22.28859,24.52278 0,2.83939 0.72448,5.43277 1.53234,7.9699 -6.12252,3.78013 -10.44777,10.73607 -10.44777,19.00515 0,12.18291 8.98673,22.07054 20.05972,22.07049 h 84.69659 c 11.0729,0 20.05972,-9.88758 20.05972,-22.07049 0,-8.26908 -4.32521,-15.22502 -10.44777,-19.00515 0.80791,-2.53708 1.53235,-5.13056 1.53235,-7.9699 0,-13.53657 -9.98527,-24.52273 -22.2886,-24.52278 -3.72995,0 -7.07892,1.28093 -10.16916,3.06535 -2.71403,-10.17558 -10.91211,-17.77901 -21.03486,-17.77901 z" />
+     d="m 301.56244,518.0895 c -10.1227,0 -18.32083,7.60343 -21.03485,17.77901 -3.0902,-1.78442 -6.43921,-3.06535 -10.16917,-3.06535 -12.30328,0 -22.28859,10.98616 -22.28859,24.52278 0,2.83939 0.72448,5.43277 1.53234,7.9699 -6.12252,3.78013 -10.44777,10.73607 -10.44777,19.00515 0,12.18291 8.98673,22.07054 20.05972,22.07049 h 84.69659 c 11.0729,0 20.05972,-9.88758 20.05972,-22.07049 0,-8.26908 -4.32521,-15.22502 -10.44777,-19.00515 0.80791,-2.53708 1.53235,-5.13056 1.53235,-7.9699 0,-13.53657 -9.98527,-24.52273 -22.2886,-24.52278 -3.72995,0 -7.07892,1.28093 -10.16916,3.06535 -2.71403,-10.17558 -10.91211,-17.77901 -21.03486,-17.77901 z"
+     inkscape:export-filename="/home/omidm/cloud/doc/site/images/nimbus-logo-bw.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
   <path
      inkscape:connector-curvature="0"
      style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-miterlimit:2;fill-opacity:1;stroke-dasharray:none"
@@ -1393,21 +1396,17 @@
          x="237.53098"
          height="44.585102"
          width="80.714409" /></flowRegion><flowPara
-       id="flowPara3915" /></flowRoot>  <text
-     sodipodi:linespacing="125%"
-     style="font-size:30px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-     xml:space="preserve"
-     id="text3917"
-     y="649.33539"
-     x="225.20937"><tspan
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr;text-anchor:start;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
-       id="tspan3919"
-       y="649.33539"
-       x="225.20937">Nimbus</tspan></text>
-  <g
+       id="flowPara3915" /></flowRoot>  <g
      id="g5950"
      transform="translate(-2.7742558,378.74943)">
     <title
        id="title5952">Layer 1</title>
   </g>
+  <path
+     style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2.92434644999999982;stroke-miterlimit:4;stroke-dasharray:none"
+     inkscape:connector-curvature="0"
+     stroke-linejoin="null"
+     stroke-linecap="null"
+     d="m 209.15841,668.3144 71.20443,-83.25154 3.16865,28.72253 76.03156,-71.78602 -76.38218,106.2805 -10.87318,-27.52191 -63.14928,47.55644 z"
+     id="svg_1" />
 </svg>
