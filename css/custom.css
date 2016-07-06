@@ -6,6 +6,16 @@ body {
     padding-bottom: 70px;
 }
 
+a:hover {
+  color: #449d44;
+  text-decoration: none;
+}
+
+a {
+  color: #5CB85C;
+}
+
+
 /** leave some space for the nav bars */
 .jumbotron {
     padding-top: 10px;
