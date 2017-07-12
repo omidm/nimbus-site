@@ -64,63 +64,185 @@
 
     <div class="container">
 
+
+    <h2> Publications </h2>
+
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-9 col-sm-9">
+          <dl>
+            <dt>
+              Execution Templates: Caching Control Plane Decisions for Strong Scaling of Data Analytics
+            </dt>
+            <dd>
+              Omid Mashayekhi, Hang Qu, Chinmayee Shah, Philip Levis
+            </dd>
+            <dd>
+              In proceedings of 2017 USENIX Annual Technical Conference (USENIX ATC '17)
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-3 col-sm-3">
+              <a class="btn-lg" href="materials/nimbus-atc.pdf" target="_blank">
+                <span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+              <a class="btn-lg" href="materials/nimbus-atc-slides.pdf" target="_blank">
+                <span class="glyphicon glyphicon-blackboard" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+              <a class="btn-lg" href="https://www.usenix.org/conference/atc17/technical-sessions/presentation/mashayekhi" target="_blank">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+        </div>
+      </div>
+      <div class="row-padded">
+        <dl>
+          <dt>
+            Abstract
+          </dt>
+          <dd>
+            Control planes of cloud frameworks trade off between scheduling
+            granularity and performance. Centralized systems schedule at task
+            granularity, but only schedule a few thousand tasks per second.
+            Distributed systems schedule hundreds of thousands of tasks per
+            second but changing the schedule is costly.
+
+            We present execution templates, a control plane abstraction that can
+            schedule hundreds of thousands of tasks per second while supporting
+            fine-grained, per-task scheduling decisions. Execution templates
+            leverage a program’s repetitive control flow to cache blocks of
+            frequently-executed tasks. Executing a task in a template requires
+            sending a single message. Large-scale scheduling changes install new
+            templates, while small changes apply edits to existing templates.
+
+            Evaluations of execution templates in Nimbus, a data analytics
+            framework, find that they provide the fine-grained scheduling
+            flexibility of centralized control planes while matching the strong
+            scaling of distributed ones. Execution templates support complex,
+            real-world applications, such as a fluid simulation with a triply
+            nested loop and data dependent branches.
+          </dd>
+        </dl>
+      </div>
+    </div>
+
+    <h2> Presentations </h2>
+
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-9 col-sm-9">
+          <dl>
+            <dt>
+              Scalable, Fast Cloud Computing with Execution Templates
+            </dt>
+            <dd>
+              Omid Mashayekhi, Hang Qu, Chinmayee Shah, Philip Levis
+            </dd>
+            <dd>
+              Poster presentation at 2016 USENIX Symposium on Operating Systems Design and Implementation (OSDI'16)
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-3 col-sm-3">
+              <a class="btn-lg" href="materials/nimbus-osdi-poster.pdf" target="_blank">
+                <span class="glyphicon glyphicon-blackboard" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+              <a class="btn-lg" href="https://www.usenix.org/conference/osdi16/poster-session" target="_blank">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+        </div>
+      </div>
+    </div>
+
+
+
     <h2> Technical Reports</h2>
 
-      <div class="jumbotron">
-      <dl>
-        <dt>
-          Distributed Graphical Simulation in the Cloud
-          <a class="btn-lg" href="http://arxiv.org/abs/1606.01966" target="_blank">
-            <span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 30px;"></span>
-          </a>
-        </dt>
-        <dd>
-          Omid Mashayekhi, Chinmayee Shah, Hang Qu, Andrew Lim, Philip Levis
-        </dd>
-        <dt>
-          Abstract
-        </dt>
-        <dd>
-          Graphical simulations are a cornerstone of modern media and
-          films. But existing software packages are designed to run on HPC
-          nodes, and perform poorly in the computing cloud.  These
-          simulations have complex data access patterns over complex data
-          structures, and mutate data arbitrarily, and so are a poor fit for
-          existing cloud computing systems. We describe a software
-          architecture for running graphical simulations in the cloud that
-          decouples control logic, computations and data exchanges. This
-          allows a central controller to balance load by redistributing
-          computations, and recover from failures. Evaluations show that the
-          architecture can run existing, state-of-the-art simulations in the
-          presence of stragglers and failures, thereby enabling this large
-          class of applications to use the computing cloud for the first
-          time.
-        </dd>
-      </dl>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-9 col-sm-9">
+          <dl>
+            <dt>
+              Distributed Graphical Simulation in the Cloud
+            </dt>
+            <dd>
+              Omid Mashayekhi, Chinmayee Shah, Hang Qu, Andrew Lim, Philip Levis
+            </dd>
+            <dd>
+              arXiv:1606.01966 [cs.DC], 2016
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-3 col-sm-3">
+              <a class="btn-lg" href="materials/nimbus-socc.pdf" target="_blank">
+                <span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+              <a class="btn-lg" href="http://arxiv.org/abs/1606.01966" target="_blank">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+        </div>
       </div>
+      <div class="row-padded">
+        <dl>
+          <dt>
+            Abstract
+          </dt>
+          <dd>
+            Graphical simulations are a cornerstone of modern media and
+            films. But existing software packages are designed to run on HPC
+            nodes, and perform poorly in the computing cloud.  These
+            simulations have complex data access patterns over complex data
+            structures, and mutate data arbitrarily, and so are a poor fit for
+            existing cloud computing systems. We describe a software
+            architecture for running graphical simulations in the cloud that
+            decouples control logic, computations and data exchanges. This
+            allows a central controller to balance load by redistributing
+            computations, and recover from failures. Evaluations show that the
+            architecture can run existing, state-of-the-art simulations in the
+            presence of stragglers and failures, thereby enabling this large
+            class of applications to use the computing cloud for the first
+            time.
+          </dd>
+        </dl>
+      </div>
+    </div>
 
 
 
-      <div class="jumbotron">
-      <dl>
-        <dt>
-          Scalable, Fast Cloud Computing with Execution Templates
-          <a class="btn-lg" href="http://arxiv.org/abs/1606.01972" target="_blank">
-            <span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 30px;"></span>
-          </a>
-        </dt>
-        <dd>
-          Omid Mashayekhi, Hang Qu, Chinmayee Shah, Philip Levis
-        </dd>
-        <dt>
-          Abstract
-        </dt>
-        <dd>
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-9 col-sm-9">
+          <dl>
+            <dt>
+              Scalable, Fast Cloud Computing with Execution Templates
+            </dt>
+            <dd>
+              Omid Mashayekhi, Hang Qu, Chinmayee Shah, Philip Levis
+            </dd>
+            <dd>
+              arXiv:1606.01972 [cs.DC], 2016
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-3 col-sm-3">
+              <a class="btn-lg" href="materials/nimbus-osdi.pdf" target="_blank">
+                <span class="glyphicon glyphicon-file" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+              <a class="btn-lg" href="http://arxiv.org/abs/1606.01972" target="_blank">
+                <span class="glyphicon glyphicon-globe" aria-hidden="true" style="font-size: 30px;"></span>
+              </a>
+        </div>
+      </div>
+      <div class="row-padded">
+        <dl>
+          <dt>
+            Abstract
+          </dt>
+          <dd>
           Large scale cloud data analytics applications are often CPU
           bound. Most of these cycles are wasted: benchmarks written in C++ run
           10-51 times faster than frameworks such as Naiad and Spark.  However,
           calling faster implementations from those frameworks only sees
-          moderate (3-5x) speedups because their control planes cannot schedule
+          moderate (4-5x) speedups because their control planes cannot schedule
           work fast enough.
           
           This paper presents execution templates, a control plane abstraction
@@ -136,9 +258,11 @@
           Running in Nimbus, analytics benchmarks can run 16-43 times faster
           than in Naiad and Spark. Nimbus's control plane can scale out to run
           these faster benchmarks on up to 100 nodes (800 cores).
-        </dd>
-      </dl>
+          </dd>
+        </dl>
       </div>
+    </div>
+
 
     </div> <!-- /container -->
 
