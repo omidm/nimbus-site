@@ -181,12 +181,13 @@
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="row">
-            <div class="col-md-6 col-sm-6">
-              <img src="images/glass.jpg" style="width: 100%; max-width: 150px; padding: 5pt"/>
-            </div>
-            <div class="col-md-6 col-sm-6">
-              <img src="images/smoke.jpg" style="width: 100%; max-width: 150px; padding: 5pt"/>
-            </div>
+            <video id="water-video" src="videos/water-s128-r12.mp4" type="video/mp4" poster="images/water-128.jpg" style="width: 100%;" controls>
+            <!-- script for changing the video source in Chrome to a Theora encoded mp4 -->
+            <script>
+              if (window.chrome) {
+                document.getElementById('water-video').src = "videos/water-s128-r12_c.mp4";
+              }
+            </script>
           </div>
           <div class="row">
             <img src="images/water.png" style="width: 100%;"/>
